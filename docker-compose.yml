@@ -1,0 +1,47 @@
+version: "3"
+
+services:
+  client:
+    build: .
+    container_name: mc-client
+    ports:
+      - "80:80"
+
+  server:
+    image: itzg/minecraft-server:java8-multiarch
+    container_name: mc-server
+    environment:
+      EULA: "TRUE"
+      VERSION: "1.15"
+      TYPE: "PAPER"
+
+      OVERRIDE_SERVER_PROPERTIES: "true"
+      ONLINE_MODE: "false"
+      MAX_TICK_TIME: 60000
+      LEVEL_TYPE: "flat"
+      GENERATOR_SETTINGS: "{\"biome\":\"minecraft:the_void\", \"layers\": []}"
+      FORCE_GAMEMODE: "true"
+      ALLOW_NETHER: "false"
+      ENFORCE_WHITELIST: "false"
+      MODE: "creative"
+      BROADCAST_CONSOLE_TO_OPS: "true"
+      BROADCAST_RCON_TO_OPS: "true"
+      ENABLE_QUERY: "false"
+      PLAYER_IDLE_TIMEOUT: 0
+      DIFFICULTY: "peaceful"
+      SPAWN_ANIMALS: "false"
+      SPAWN_MONSTERS: "false"
+      SPAWN_NPCS: "true"
+      PVP: "false"
+      SNOOPER_ENABLED: "false"
+      HARDCORE: "false"
+      ENABLE_STATUS: "true"
+      ENABLE_COMMAND_BLOCK: "false"
+      MAX_PLAYERS: 20
+      RCON_PASSWORD: "minecraft"
+      ENABLE_RCON: "true"
+      GENERATE_STRUCTURES: "false"
+      ALLOW_FLIGHT: "true"
+    tty: true
+    stdin_open: true
+    restart: "no"
