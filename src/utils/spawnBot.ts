@@ -3,6 +3,7 @@ import timer from './timer'
 
 const SERVER_DATA = {
   host: 'mc-server',
+  //host: '0.0.0.0',
   port: 25565,
   version: '1.15',
 }

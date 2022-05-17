@@ -42,6 +42,7 @@ app.listen(PORT, () => {
 
   connectRCON(new RCON({
     host: 'mc-server',
+    //host: '0.0.0.0',
     port: 25575,
     timeout: 5000,
   }), 'minecraft')

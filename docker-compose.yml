@@ -6,6 +6,8 @@ services:
     container_name: mc-client
     ports:
       - "80:80"
+    environment:
+      CAGE_LOCATION: "center"
 
   server:
     image: itzg/minecraft-server:java8-multiarch
