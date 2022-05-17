@@ -18,7 +18,7 @@ const appendDataToRequest = async (req: any, res: Response, next: NextFunction) 
         
         const [x, y, z] = data['Pos'] as number[]
         const positionProcessed = {
-          x: (x % 16) - 1,
+          x: (x % 128) - 1,
           z: z - 1,
         }
 

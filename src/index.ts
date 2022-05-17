@@ -14,7 +14,7 @@ import appendDataToRequest from './middleware/appendDataToRequest'
 const PORT = 80
 
 const VILLAGER_AMOUNT = 4
-const VILLAGER_SPACING = 32
+const VILLAGER_SPACING = 128
 const CAGE_WIDTH = 16
 const CAGE_DEPTH = 16
 
